@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(270deg, #333 , #2b283a);
+}
+
+#container {
+    position: absolute;     /* fixed */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: fit-content;
+    height: 100%;
+    background-image: url('./img/space_bg.jpg');
+    background-repeat: repeat-x;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    min-width: 420px;
+}
+
+aside {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+#sun {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./img/tex-sun.jpg');
+    background-position: right middle;
+    background-size: auto;
+    width: 120px;
+    height: 100%;
+    border-radius: 0 50% 50% 0;
+    animation: sun-radiation 3s infinite;
+}
+
+#solar-system {
+    margin: 0 40px 0 160px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+
+.planet-data {
+    display: none;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    opacity: 0.7;
+}
+
+.planet-img {
+    width: 90%;
+    height: 90%
+}
+
+.planet-info {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+.planet {
+    background-size: cover;
+    border-radius: 50%;
+    margin: 20px;
+    z-index: 1;
+    animation: float 10s infinite;
+}
+
+.planet:hover {
+    transition: 0.2s;
+    transform: scale(1.5);
+    /* cursor: pointer; */
+}
+
+.shadow {
+    background-position: top left;
+    background-size: cover;
+    z-index: 9;
+}
+
+.gravitate1 {
+    animation: float1 10s infinite;
+}
+
+.gravitate2 {
+    animation: float2 20s infinite;
+}
+
+.gravitate3 {
+    animation: float3 16s infinite;
+}
+
+.gravitate4 {
+    animation: float4 20s infinite;
+}
+
+
+@keyframes sun-radiation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(243, 228, 19, 0.7);
+    }
+    
+    70% {
+        box-shadow: 0 0 0 20px rgba(235, 133, 17, 0);
+    }
+}
+
+@keyframes float1 {
+    0% {
+        margin-top: 0;
+    }
+    
+    30% {
+        margin-top: -10px;
+    }  
+    
+    60% {
+        margin-top: 10px;
+    }  
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes float2 {
+    0% {
+        margin-top: 0;
+    }
+    
+    30% {
+        margin-top: -8px;
+    }  
+    
+    60% {
+        margin-top: 8px;
+    }  
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes float3 {
+    0% {
+        margin-top: 0;
+    }
+    
+    30% {
+        margin-top: 7px;
+    }  
+    
+    60% {
+        margin-top: -7px;
+    }  
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes float4 {
+    0% {
+        margin-top: 0;
+    }
+    
+    30% {
+        margin-top: 5px;
+    }  
+    
+    60% {
+        margin-top: -5px;
+    }  
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+span {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 4px;
+    height: 4px;
+    margin-top: -10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+        0 0 0 8px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(255, 255, 255, 1);
+    animation: shooting-star 10s linear infinite;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+
+@keyframes shooting-star {
+    0% {
+        transform: rotate(315deg) translateX(0);
+    }
+    70% {
+        transform: rotate(315deg) translateX(0);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-900px);
+        opacity: 0;
+    }
+}

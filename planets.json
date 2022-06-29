@@ -1,0 +1,99 @@
+[
+    {
+    "order": 1,
+    "name": "Mercury",
+    "diameter": 4879,
+    "mass": 0.0553,
+    "volume": 0.0562,
+    "gravity": 0.377,
+    "distance": 57900000,
+    "temperature": "167 °C",
+    "rotation": "58.7d",
+    "translation": "87,96d"
+    },
+    {
+    "order": 2,
+    "name": "Venus",
+    "diameter": 12104,
+    "mass": 0.815,
+    "volume": 0.857,
+    "gravity": 0.905,
+    "distance": 108200000,
+    "temperature": "464 °C",
+    "rotation": "243d",
+    "translation": "224,68d"
+    },
+    {
+    "order": 3,
+    "name": "Earth",
+    "diameter": 12756,
+    "mass": 1,
+    "volume": 1,
+    "gravity": 1,
+    "distance": 149600000,
+    "temperature": "15 °C",
+    "rotation": "23h56",
+    "translation": "365,26d"
+    },
+    {
+    "order": 4,
+    "name": "Mars",
+    "diameter": 6787,
+    "mass": 0.107,
+    "volume": 0.151,
+    "gravity": 0.379,
+    "distance": 227900000,
+    "temperature": "-65 °C",
+    "rotation": "24.6h",
+    "translation": "686,98d"
+    },
+    {
+    "order": 5,
+    "name": "Jupiter",
+    "diameter": 142796,
+    "mass": 317.83,
+    "volume": 1321,
+    "gravity": 2.528,
+    "distance": 778300000,
+    "temperature": "-110 °C",
+    "rotation": "9.84h",
+    "translation": "11,86y"
+    },
+    {
+    "order": 6,
+    "name": "Saturn",
+    "diameter": 120660,
+    "mass": 95.162,
+    "volume": 764,
+    "gravity": 1.065,
+    "distance": 1427000000,
+    "temperature": "-140 °C",
+    "rotation": "10.2h",
+    "translation": "29,45y"
+
+    },
+    {
+    "order": 7,
+    "name": "Uranus",
+    "diameter": 51118,
+    "mass": 14.536,
+    "volume": 63.1,
+    "gravity": 0.886,
+    "distance": 2871000000,
+    "temperature": "-195 °C",
+    "rotation": "17.9h",
+    "translation": "84,07y"
+    },
+    {
+    "order": 8,
+    "name": "Neptune",
+    "diameter": 48600,
+    "mass": 17.147,
+    "volume": 57.7,
+    "gravity": 1.137,
+    "distance": 4497100000,
+    "temperature": "-200 °C",
+    "rotation": "19h",
+    "translation": "164,81y"
+    }
+]
