@@ -20,9 +20,29 @@ function getPlanets() {
             for (let i in data) {
                 const planet = document.createElement('div');
                 planet.setAttribute("id", i);
-                planet.style.minHeight = `${data[i].diameter/1000}px`;
-                planet.style.minWidth = `${data[i].diameter/1000}px`;
-                planet.style.backgroundImage = `url('./img/shadow.png'), url('./img/tex-${data[i].name}.png`;
+                const size = `${data[i].diameter/500}px`;
+                planet.style.width = size;
+                planet.style.height = size;
+                console.log(planet);
+                
+                if (data[i].name == "Saturn") {
+                    planet.classList.add('rotate');
+                    planet.style.backgroundImage = `url('./img/tex-${data[i].name}.png`;
+                    planet.innerHTML = `
+                    <img src="./img/ring.png" class="saturn-ring">                    
+                    <img src="./img/shadow.png" class="shadow unrotate">                    
+                    `
+                } else {
+                    planet.classList.remove('rotate');
+                    planet.style.backgroundImage = `url('./img/tex-${data[i].name}.png`;
+                    planet.innerHTML = `
+                        <img src="./img/shadow.png" class="shadow">                
+                        `
+                }
+                
+                
+                
+                //planet.style.backgroundImage = `url('./img/shadow.png'), url('./img/tex-${data[i].name}.png`;
                 planet.classList.add('planet');
                 planet.classList.add(`gravitate${random(1,4)}`);
                 
@@ -83,9 +103,6 @@ function showInfo(planet) {
         .catch(e => console.log("Erro: " + e.message));
     ;
 }
-
-
-
 
 
 function closeData() {

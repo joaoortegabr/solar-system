@@ -67,7 +67,7 @@ aside {
 }
 
 #solar-system {
-    margin: 0 40px 0 160px;
+    margin: 0 40px 0 200px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -85,6 +85,20 @@ aside {
     cursor: pointer;
     width: 400px;
     min-width: 60%;
+}
+
+@media (max-width: 420px) {
+    #planet-data {
+        display: none;
+        background-color: rgb(247, 247, 247, 0.8);
+        border-radius: 8px;
+        border: 10px solid #2b283a;
+        text-align: center;
+        padding: 30px;
+        cursor: pointer;
+        min-width: 400px;
+        width: 80%;
+    }
 }
 
 #planet-data span {
@@ -122,7 +136,17 @@ aside {
     z-index: 20;
 }
 
-.saturn-ring {
+main .saturn-ring {
+    position: absolute;
+    width: 472px;
+    height: 150px;
+    top: 60px;
+    left: -110px;
+    z-index: 30;
+    transform: rotate(18deg);
+}
+
+aside .saturn-ring {
     position: absolute;
     width: 385px;
     height: 140px;
@@ -130,7 +154,6 @@ aside {
     left: -90px;
     z-index: 30;
     transform: rotate(18deg);
-
 }
 
 .info-text {
@@ -142,24 +165,33 @@ aside {
     transform: rotate(-20deg);
 }
 
-.planet {
-    background-size: cover;
-    border-radius: 50%;
-    margin: 20px;
-    z-index: 1;
-    animation: float 10s infinite;
+.unrotate {
+    transform: rotate(20deg);
 }
 
-.planet:hover {
-    transition: 0.2s;
-    transform: scale(1.5);
-    cursor: pointer;
+.planet {
+    border-radius: 50%;
+    margin: 0 40px;
+    z-index: 1;
+    animation: float 10s infinite;
+    background-size: cover;
+}
+
+.texture {
+    background-size: cover;
+    width: auto;
+    height: 100%;
+    z-index: 5;
 }
 
 .shadow {
-    background-position: top left;
-    background-size: cover;
-    z-index: 9;
+    width: auto;
+    height: 100%;
+    z-index: 10;
+}
+
+.planet:hover {
+    cursor: pointer;
 }
 
 .gravitate1 {
@@ -260,6 +292,8 @@ aside {
         margin-top: 0;
     }
 }
+
+/* ----- SHOOTING STAR ----- */
 
 main span {
     position: absolute;
